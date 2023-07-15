@@ -14,9 +14,13 @@ const Home = () => {
   return (
     <div style={homeRootStyle} className='Home'>
       <ShowcaseBanner/>
-      <Container>
+      {/* <Container sx={{
+          border: "1px solid red"
+      }}>
+      </Container> */}
+      <div>
         <CategoriesSection/>
-      </Container>
+      </div>
     </div>
   )
 }
