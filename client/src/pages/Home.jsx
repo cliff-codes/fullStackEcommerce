@@ -8,7 +8,11 @@ const Home = () => {
 
   const homeRootStyle = {
     marginTop: "16px",
-    flex: "1"
+    flex: "1",
+    width: "100%",
+    maxWidth: "100vw",
+    boxSizing: "border-box",
+    position: "relative"
   }
 
   return (
@@ -18,9 +22,9 @@ const Home = () => {
           border: "1px solid red"
       }}>
       </Container> */}
-      <div>
         <CategoriesSection/>
-      </div>
+      {/* <div>
+      </div> */}
     </div>
   )
 }

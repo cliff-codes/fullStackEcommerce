@@ -54,18 +54,19 @@ import CategoryCard from './CategoryCard'
 
 const CategoriesSection = () => {
     const sectionStyle = {
+        width: "100%", 
         border: "1px solid red",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        boxSizing: "border-box",   
-        position: "relative"
+        background: "grey",
+        boxSizing: "border-box",  
     }
 
     const cardStyle = {
         width: "100%",
         display: "flex",
-        justifyContent :"space-around"
+        justifyContent: "space-around"
     }
   return (
     <div style={sectionStyle}>
