@@ -18,13 +18,11 @@ const Home = () => {
   return (
     <div style={homeRootStyle} className='Home'>
       <ShowcaseBanner/>
-      {/* <Container sx={{
-          border: "1px solid red"
+      <Container sx={{
+          
       }}>
-      </Container> */}
         <CategoriesSection/>
-      {/* <div>
-      </div> */}
+      </Container>
     </div>
   )
 }

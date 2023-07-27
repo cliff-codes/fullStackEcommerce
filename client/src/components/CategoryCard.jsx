@@ -1,15 +1,26 @@
 import React from 'react'
 
-const CategoryCard = () => {
+const CategoryCard = ({name, backgroundImage}) => {
   return (
 
-    <div>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center"
+    }}>
         <div style = {{
             width: "100px",
-            height: "150px",
-            border: "1px solid red"
+            height: "100px",
+            border: "1px solid red",
+            borderRadius: "50%",
+            backgroundImage: `{url(${backgroundImage})}`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat"
         }}>
-            oh no
+            
+        </div>
+        <div>
+          {name}
         </div>
     </div>
   )
