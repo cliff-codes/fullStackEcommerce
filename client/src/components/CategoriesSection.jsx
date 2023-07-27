@@ -52,15 +52,16 @@
         import Women from '../assets/images/Women.jpg'
         import Electronics from '../assets/images/electronics.jpg'
         import Jewellery from '../assets/images/jewellery.jpg'
-
+        import { Link } from 'react-router-dom'
 
 const CategoriesSection = () => {
     const sectionStyle = {
-        width: "100%", 
+        maxWidth: "100%", 
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         boxSizing: "border-box",  
+        flexWrap: "wrap"
     }
 
     const cardStyle = {
@@ -70,12 +71,36 @@ const CategoriesSection = () => {
     }
   return (
     <div style={sectionStyle}>
-        <div>Categories</div>
+        <div style = {{
+            fontWeight: "bold",
+            fontSize: "20px",
+            marginTop: "32px"
+        }}>Categories</div>
         <div style={cardStyle}>
-            <CategoryCard name={"Men"} backgroundImage={Men}/>
-            <CategoryCard name={"Women"} backgroundImage={Women}/>
-            <CategoryCard name={"Jewellery"} backgroundImage={Jewellery}/>
-            <CategoryCard name={"Electronics"} backgroundImage={Electronics}/>
+            <Link to= '/categoryItems' style={{
+                color: "black",
+                textDecoration: "none"
+            }}>
+                <CategoryCard name={"Men"} backgroundImage={Men}/>
+            </Link>
+            <Link to = '/categoryItems' style={{
+                color: "black",
+                textDecoration: "none"
+            }}>
+                <CategoryCard name={"Women"} backgroundImage={Women}/>
+            </Link>
+            <Link to = "/categoryItmes" style={{
+                color: "black",
+                textDecoration: "none"
+            }}>
+                <CategoryCard name={"Jewellery"} backgroundImage={Jewellery}/>
+            </Link>
+            <Link to="/categoryItems" style={{
+                color: "black",
+                textDecoration: "none"
+            }}>
+                <CategoryCard name={"Electronics"} backgroundImage={Electronics}/>
+            </Link>
         </div>
     </div>
   )
