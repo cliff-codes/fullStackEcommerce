@@ -4,11 +4,15 @@ import { featuredProducts } from '../redux/features/fetchDataSlice'
 import ProductCard from './ProductCard'
 
 const FeaturedProductsSection = () => {
+
+    const url = 'https://fakestoreapi.com/products?limit=4'
+    const params = {url}
+
     const dispatch = useDispatch()
     const {data, loading, error} = useSelector((state) => state.featuredSlice)
 
     useEffect(() => {
-        dispatch(featuredProducts())
+        dispatch(featuredProducts(params))
     }, [dispatch])
 
   return (

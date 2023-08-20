@@ -7,8 +7,9 @@ const initialState = {
     error: null,
 }
 
-export const featuredProducts = createAsyncThunk('api/featuredProducts', async() => {
-    const response = await fetchFeaturedProducts()
+export const featuredProducts = createAsyncThunk('api/featuredProducts', async(params) => {
+    const {url} = params
+    const response = await fetchFeaturedProducts(url)
     return response
 })
 
